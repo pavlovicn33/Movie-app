@@ -1,0 +1,50 @@
+@import 'mixin';
+@import 'var';
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: $font-main;
+}
+
+header{
+    background-color: $color-red-pink;
+
+    .header-container{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+
+        h1{
+            font-family: $font-title;
+            color: $color-black;
+            font-size: 50px;
+        }
+        
+        ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            
+
+            li{
+                padding: 20px;
+            }
+        }
+    }
+}
+
+.header-container{
+    
+    a{
+        font-size: 20px;
+        color: $color-black;
+    }
+}
+
+.top-10-movies{
+    height: 1600px;
+    background-color: $color-black;
+}
+
