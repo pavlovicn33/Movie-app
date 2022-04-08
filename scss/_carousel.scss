@@ -1,0 +1,71 @@
+.container-carousel{
+    background-color: $color-black;
+}
+
+.top-10-movies{
+    width: 80%;
+    height: 400px;
+    margin: auto;
+    background-color: $color-black;
+    overflow: hidden;
+    position: relative;
+
+    .carousel{
+        width: 90%;
+        margin: auto;
+    }
+
+    span{
+        position: absolute;
+        top: 40%;
+        font-size: 80px;
+        font-weight: bold;
+        color: $color-red-pink;
+        cursor: pointer;
+        left: .1%;
+        z-index: 1;
+        user-select: none;
+    }
+
+    span:nth-of-type(2){
+        left: 98%;
+        text-align: right;
+    }
+
+    .movies{
+        width: 98%;
+        height: 100%;
+        background: $color-black;
+        margin: 10px auto;
+        display: flex;
+        justify-content: left;
+        overflow-x: auto;
+
+    }
+
+    .movies::-webkit-scrollbar{
+        visibility: hidden;
+    }
+    
+    .movie{
+        min-width: 250px;
+        height: 350px;
+        position: relative;
+        left: 0;
+        text-align: center;
+        font-size: 100px;
+        font-weight: bold;
+        margin: 10px 20px;
+        color: white;
+        background-color: $color-red-gray;
+        transition: 0.5s;
+    }
+}
+
+.loading{
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 130px;
+}

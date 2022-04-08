@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/carousel.js"></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-            <h1>Movies&Shows
-            <img src="img/—Pngtree—filming filming film festival movie_3854965.png" height="50px" alt="">
-            </h1>
-            <ul>
-                <li><a>Popular</a></li>
-                <li><a>Tv shows</a></li>
-                <li><a>Year</a></li>
-                <li><a >Genre</a></li>
-            </ul>
-        </div>
+      <div class="header-container">
+        <h1>
+          Movies&Shows
+          <img
+            src="img/—Pngtree—filming filming film festival movie_3854965.png"
+            height="50px"
+            alt=""
+          />
+        </h1>
+        <ul>
+          <li><a>Popular</a></li>
+          <li><a>Tv shows</a></li>
+          <li><a>Year</a></li>
+          <li><a>Genre</a></li>
+        </ul>
+      </div>
     </header>
-    <div class="top-10-movies">
+    <div class="container-carousel">
+      <div class="top-10-movies">
         <div class="carousel">
-            <div></div>
+          <span>&#139;</span>
+          <span>&#155;</span>
+          <div id="films" class="movies">
+              <h1 class="loading">...</h1>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+    <div class="test">
+
+    </div>
+  </body>
 </html>
