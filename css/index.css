@@ -98,11 +98,84 @@ header .header-container ul li {
 .header-container a {
   font-size: 20px;
   color: #1a1a1d;
+  font-weight: bold;
 }
 
 .test {
   height: 800px;
   background-color: #1a1a1d;
+}
+
+.dropdown-icon {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.dropdown {
+  display: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  display: none;
+}
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #c3073f;
+  display: block;
+}
+.sidebar a a:hover {
+  color: #6f2232;
+}
+
+@media (max-width: 1000px) {
+  header .header-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 786px) {
+  header .header-container h1 {
+    font-size: 30px;
+  }
+  header .header-container a {
+    font-size: 16px;
+  }
+  header .header-container ul li {
+    padding: 10px;
+  }
+}
+@media (max-width: 600px) {
+  header .header-container {
+    justify-content: start;
+    align-items: center;
+  }
+  header .header-container h1 {
+    margin-left: 20px;
+  }
+  header .header-container .dropdown {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  header .header-container .dropdown:hover .dropdown-icon {
+    background-color: #414141;
+  }
+  header .header-container ul {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

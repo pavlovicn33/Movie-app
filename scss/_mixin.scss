@@ -1,4 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500&family=Roboto&display=swap');
 
-//MEDIA QUERY
+
+@mixin tablet-1000px {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+
+  
+@mixin tablet-786px {
+    @media (max-width: 786px) {
+      @content;
+    }
+  }
+
+  @mixin mobile-600px {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }

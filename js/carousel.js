@@ -41,10 +41,18 @@ window.onload = () => {
            out += `<img class="movie" width="100%" height="100%" src="/img/${popularMovies[i].image}">`
        }
     
-        console.log(out)
        movieDiv.innerHTML = out
    }
 
    refreshMovies()
+   
+   let dropdown = document.getElementById("dropdown")
+   
+   dropdown.addEventListener("click",() => {
+     let sidebar = document.getElementById("sidebar")
+     sidebar.style.display = "block"
+   })
+   
+
 
 }
