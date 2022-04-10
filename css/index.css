@@ -16,24 +16,26 @@
   width: 90%;
   margin: auto;
 }
-.top-10-movies span {
+.top-10-movies .arrow {
   position: absolute;
   top: 40%;
   font-size: 80px;
   font-weight: bold;
   color: #c3073f;
   cursor: pointer;
-  left: 0.1%;
   z-index: 1;
   user-select: none;
 }
 .top-10-movies span:nth-of-type(2) {
-  left: 98%;
+  right: 0.1%;
+  text-align: right;
+}
+.top-10-movies span:nth-of-type(1) {
+  left: 0.1%;
   text-align: right;
 }
 .top-10-movies .movies {
-  width: 98%;
-  height: 100%;
+  width: 100%;
   background: #1a1a1d;
   margin: 10px auto;
   display: flex;
@@ -117,17 +119,27 @@ header .header-container ul li {
   display: none;
 }
 
+.sidebar.show {
+  opacity: 1;
+  width: 300px;
+  height: 100%;
+}
+
+.sidebar.close {
+  opacity: 0;
+}
+
 .sidebar {
   height: 100%;
-  width: 160px;
+  width: 1px;
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
   background-color: #111;
-  overflow-x: hidden;
+  overflow: hidden;
   padding-top: 20px;
-  display: none;
+  border-right: #4e4e50 1px solid;
+  opacity: 0;
+  transition: all 0.75s ease;
 }
 .sidebar a {
   padding: 6px 8px 6px 16px;
@@ -136,7 +148,7 @@ header .header-container ul li {
   color: #c3073f;
   display: block;
 }
-.sidebar a a:hover {
+.sidebar a:hover {
   color: #6f2232;
 }
 
