@@ -1,49 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500&family=Roboto&display=swap");
-.container-carousel {
-  background-color: #1a1a1d;
-}
-
 .top-10-movies {
   width: 80%;
   height: 400px;
   margin: auto;
   background-color: #1a1a1d;
-  overflow: hidden;
   position: relative;
 }
-.top-10-movies .carousel {
-  width: 90%;
-  margin: auto;
+.top-10-movies #remove {
+  transition: all 0.75s;
+}
+.top-10-movies #remove.showMe {
+  opacity: 1;
+}
+.top-10-movies #remove.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 .top-10-movies .arrow {
   position: absolute;
-  top: 40%;
+  top: 30%;
   font-size: 80px;
   font-weight: bold;
   color: #c3073f;
   cursor: pointer;
   z-index: 1;
   user-select: none;
+  transition: all 500ms;
 }
 .top-10-movies span:nth-of-type(2) {
-  right: 0.1%;
+  right: -5%;
   text-align: right;
 }
+.top-10-movies span:nth-of-type(2):active {
+  transform: scale(0.5);
+}
 .top-10-movies span:nth-of-type(1) {
-  left: 0.1%;
+  left: -5%;
   text-align: right;
+}
+.top-10-movies span:nth-of-type(1):active {
+  transform: scale(0.5);
 }
 .top-10-movies .movies {
   width: 100%;
   background: #1a1a1d;
-  margin: 10px auto;
   display: flex;
   justify-content: left;
-  overflow-x: auto;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+.top-10-movies .movies:active {
+  cursor: grab;
 }
 .top-10-movies .movies::-webkit-scrollbar {
-  visibility: hidden;
+  display: none;
 }
 .top-10-movies .movie {
   min-width: 250px;
@@ -55,8 +66,42 @@
   font-weight: bold;
   margin: 10px 20px;
   color: white;
-  background-color: #6f2232;
-  transition: 0.5s;
+  background-color: #1a1a1d;
+  transition: all 500ms;
+}
+.top-10-movies .image-container:hover > .movie {
+  filter: blur(4px);
+}
+.top-10-movies .image-container {
+  position: relative;
+}
+.top-10-movies .image-container .description {
+  opacity: 0;
+  transition: 1s;
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+.top-10-movies .image-container .description span {
+  color: gold;
+}
+.top-10-movies .image-container #play {
+  opacity: 0;
+  transition: 500ms;
+  pointer-events: none;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.top-10-movies .image-container:hover > #play {
+  opacity: 1;
+  pointer-events: all;
+}
+.top-10-movies .image-container:hover > .description {
+  opacity: 1;
 }
 
 .loading {
@@ -72,6 +117,11 @@
   padding: 0%;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1a1a1d;
 }
 
 header {

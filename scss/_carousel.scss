@@ -1,81 +1,138 @@
-.container-carousel{
-    background-color: $color-black;
-}
+.top-10-movies {
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  background-color: $color-black;
+  position: relative;
+  
+  #remove {
+    transition: all 0.75s;
+  }
 
-.top-10-movies{
-    width: 80%;
-    height: 400px;
-    margin: auto;
+  #remove.showMe {
+    opacity: 1;
+  }
+
+  #remove.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .arrow {
+    position: absolute;
+
+    top: 30%;
+    font-size: 80px;
+    font-weight: bold;
+    color: $color-red-pink;
+    cursor: pointer;
+    z-index: 1;
+    user-select: none;
+    transition: all 500ms;
+  }
+
+  span:nth-of-type(2) {
+    right: -5%;
+    text-align: right;
+
+    &:active {
+      transform: scale(0.5);
+    }
+  }
+  span:nth-of-type(1) {
+    left: -5%;
+    text-align: right;
+    &:active {
+      transform: scale(0.5);
+    }
+  }
+
+
+  .movies {
+    width: 100%;
+    background: $color-black;
+
+    display: flex;
+    justify-content: left;
+    overflow-x: hidden;
+    cursor: pointer;
+    // pointer-events: none;
+    &:active {
+      cursor: grab;
+    }
+  }
+
+  .movies::-webkit-scrollbar {
+    display: none;
+  }
+
+  .movie {
+    min-width: 250px;
+    height: 350px;
+    position: relative;
+    left: 0;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 10px 20px;
+    color: white;
     background-color: $color-black;
-    overflow: hidden;
+    transition: all 500ms;
+    
+  }
+
+  .image-container:hover > .movie {
+    filter: blur(4px);
+  }
+
+  .image-container {
     position: relative;
 
-    .carousel{
-        width: 90%;
-        margin: auto;
+    .description {
+      opacity: 0;
+      transition: 1s;
+      color: white;
+      position: absolute;
+      bottom: 10%;
+      left: 10%;
+
+      span {
+        color: gold;
+      }
     }
 
-    .arrow{
-        position: absolute;
-        top: 40%;
-        font-size: 80px;
-        font-weight: bold;
-        color: $color-red-pink;
-        cursor: pointer;
-        z-index: 1;
-        user-select: none;
+    #play {
+      opacity: 0;
+      transition: 500ms;
+      pointer-events: none;
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
     }
+  }
 
-    span:nth-of-type(2){
-        right: .1%;
-        text-align: right;
-    }
-    span:nth-of-type(1){
-        left: .1%;
-        text-align: right;
-    }
+  .image-container:hover > #play {
+    opacity: 1;
+    pointer-events: all;
+  }
 
-    .movies{
-        width: 100%;
-        background: $color-black;
-        margin: 10px auto;
-        display: flex;
-        justify-content: left;
-        overflow-x: auto;
-
-    }
-
-    .movies::-webkit-scrollbar{
-        visibility: hidden;
-    }
-    
-    .movie{
-        min-width: 250px;
-        height: 350px;
-        position: relative;
-        left: 0;
-        text-align: center;
-        font-size: 100px;
-        font-weight: bold;
-        margin: 10px 20px;
-        color: white;
-        background-color: $color-red-gray;
-        transition: 0.5s;
-    }
+  .image-container:hover > .description {
+    opacity: 1;
+  }
 }
 
-.loading{
-    width: 100%;
-    color: white;
-    text-align: center;
-    margin-top: 50px;
-    font-size: 130px;
+.loading {
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 130px;
 }
 
 // @include tablet-1000px {
 //     .top-10-movies{
-       
-        
-    
+
 //     }
 // }
