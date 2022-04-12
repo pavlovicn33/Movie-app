@@ -4,7 +4,8 @@
   margin: auto;
   background-color: $color-black;
   position: relative;
-  
+
+
   #remove {
     transition: all 0.75s;
   }
@@ -51,15 +52,15 @@
   .movies {
     width: 100%;
     background: $color-black;
-
     display: flex;
-    justify-content: left;
-    overflow-x: hidden;
+    overflow:hidden;
     cursor: pointer;
+    scroll-behavior: smooth;
     // pointer-events: none;
     &:active {
       cursor: grab;
     }
+    
   }
 
   .movies::-webkit-scrollbar {
@@ -69,8 +70,6 @@
   .movie {
     min-width: 250px;
     height: 350px;
-    position: relative;
-    left: 0;
     text-align: center;
     font-size: 100px;
     font-weight: bold;
@@ -78,7 +77,9 @@
     color: white;
     background-color: $color-black;
     transition: all 500ms;
-    
+    &:last-child {
+      margin-right: 20px;
+    }
   }
 
   .image-container:hover > .movie {
