@@ -97,6 +97,10 @@
   transform: translate(-50%, -50%);
   color: white;
 }
+.top-10-movies .image-container #play:active {
+  transition: none;
+  color: #c3073f;
+}
 .top-10-movies .image-container:hover > #play {
   opacity: 1;
   pointer-events: all;
