@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500&family=Roboto&display=swap");
+.movies {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.movies .image-container {
+  text-align: start;
+  font-weight: bold;
+  margin: 5px;
+  color: white;
+  background-color: #1a1a1d;
+  position: relative;
+}
+.movies .image-container .description {
+  opacity: 0;
+  transition: 1s;
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+.movies .image-container .description span {
+  color: gold;
+}
+.movies .image-container .movie {
+  border-radius: 5px;
+  transition: 500ms all;
+}
+.movies .image-container #play {
+  opacity: 0;
+  transition: 500ms;
+  pointer-events: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.movies .image-container #play:active {
+  transition: none;
+  color: #c3073f;
+}
+.movies .image-container:hover > #play {
+  opacity: 1;
+  pointer-events: all;
+}
+.movies .image-container:hover > .description {
+  opacity: 1;
+}
+.movies .image-container:hover > .movie {
+  filter: blur(4px);
+}
+
+.search-results-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  color: #c3073f;
+  margin-bottom: 30px;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  height: 200px;
+  background-color: #6f2232;
+}
+footer .footer-text {
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 30px;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    height: 250px;
+  }
+}
+@media (max-width: 600px) {
+  footer {
+    height: 300px;
+  }
+
+  .movies {
+    flex-direction: column;
+  }
+  .movies .image-container {
+    text-align: center;
+  }
+  .movies .image-container .description {
+    position: static;
+    opacity: 1;
+  }
+  .movies .image-container:hover > .movie {
+    filter: blur(0px);
+  }
+}
+
+/*# sourceMappingURL=search.html.css.map */

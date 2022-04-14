@@ -19,7 +19,7 @@
   </head>
   <body>
     <div id="sidebar" class="sidebar">
-      <a>Popular</a>
+      <a href="index.html">Popular</a>
       <a>Tv shows</a>
       <a>Year</a>
       <a>Genre</a>
@@ -55,26 +55,22 @@
             <div class="dropdown-icon"></div>
           </span>
         </div>
-        <h1 id="title">
-          Movies&Shows
-          <img
-            src="img/—Pngtree—filming filming film festival movie_3854965.png"
-            height="50px"
-            alt=""
-          />
+          <h1 id="title">
+            Movies&Shows
+            <img
+              src="img/—Pngtree—filming filming film festival movie_3854965.png"
+              height="50px"
+              alt=""
+            />
         </h1>
         <ul>
-          <li><a>Popular</a></li>
-          <li><a>Tv shows</a></li>
-          <li><a>Year</a></li>
-          <li><a>Genre</a></li>
+          <li><a  href="#">Popular</a></li>
+          <li><a >Tv shows</a></li>
+          <li><a >Year</a></li>
+          <li><a >Genre</a></li>
         </ul>
       </div>
-    </header>
-    <!-- <div class="popular-container">
-      <h1 class="popular">Popular Films</h1>
-    </div> -->
-    
+    </header>    
     <div class="container-popular">
           <h1 class="animate-charcter">&#9472;&#9472;&#9472;&#9472; Popular Films &#9472;&#9472;&#9472;&#9472;</h1>
       </div>
@@ -85,6 +81,12 @@
       <div id="films" class="movies">
         <h1 class="loading">...</h1>
       </div>
+    </div>
+    <div class="search-bar">
+      <h1 class="animate-charcter">&#9472;&#9472;&#9472; Search Any Movie or Show &#9472;&#9472;&#9472;</h1>
+      <form onsubmit="setUrl()" name="form" id="search-form"  method="dialog">
+        <input id="search-input" type="text" placeholder="&#128269">
+        </form>
     </div>
 
     <div class="test"></div>

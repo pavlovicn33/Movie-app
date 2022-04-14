@@ -26,6 +26,10 @@ header {
       font-family: $font-title;
       color: $color-black;
       font-size: 50px;
+
+      &:hover{
+        cursor: pointer;
+      }
     }
 
     ul {
@@ -45,6 +49,7 @@ header {
     font-size: 20px;
     color: $color-black;
     font-weight: bold;
+    text-decoration: none;
   }
 }
 
@@ -156,6 +161,21 @@ text-align: center;
   }
 }
 
+.search-bar{
+  text-align: center;
+
+  #search-input{
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $color-red-pink;
+    border: none;
+    color: white;
+
+  }
+}
+
+
 @include tablet-1000px {
   header {
     .header-container {
@@ -181,6 +201,12 @@ text-align: center;
           padding: 10px;
         }
       }
+    }
+  }
+  .search-bar{
+    .animate-charcter{
+      font-size: 30px;
+      padding: 15px;
     }
   }
 
@@ -214,6 +240,20 @@ text-align: center;
       ul {
         display: none;
       }
+    }
+  }
+
+  .container-popular{
+  
+    .animate-charcter{
+      font-size: 30px;
+    }
+  }
+
+  .search-bar{
+    .animate-charcter{
+      font-size: 25px;
+      padding: 8px;
     }
   }
 }

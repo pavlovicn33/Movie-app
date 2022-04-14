@@ -211,6 +211,8 @@ function refreshMovies() {
 
 refreshMovies();
 
+//Hamburger
+
 let dropdown = document.getElementById("dropdown");
 
 dropdown.addEventListener("click", () => {
@@ -230,6 +232,7 @@ document.addEventListener("mouseup", function (params) {
     sidebar.classList.remove("show");
   }
 });
+
 
 //Carousel drag
 
